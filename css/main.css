@@ -62,6 +62,19 @@ textarea {
     body {
         font-family: Helvetica, sans-serif;
         margin: 0;
+        position: relative;
+        overflow-x:hidden; 
+    }
+    #inspire {
+        bottom: 15px;
+        color: gray;
+        display: inline-block;
+        font-family: 'Lora', serif;
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 25px;
     }
     .flex-container {
         align-items: center;
