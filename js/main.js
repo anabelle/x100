@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-	var lista_nombres = shuffle(nombres);
-	var lista_colores = shuffle(colores);
 
 	function shuffle(o){
 		for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -18,6 +16,8 @@ $( document ).ready(function() {
 	  };
 	}
 
+	var lista_nombres = shuffle(nombres);
+	var lista_colores = shuffle(colores);
 	var colors = randomNoRepeats( lista_colores );
 
 	var i;
