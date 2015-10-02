@@ -1,32 +1,34 @@
 $( document ).ready(function() {
 
 	var colores = [
+	                '#FF0000', 
+	                '#FF99FF', 
+	                '#000099', 
+	                '#0033FF', 
+	                '#00FFFF',
+					'#00FF66', 
+	                '#005436', 
+	                '#CCFF00', 
 	                '#FFFF00', 
-	                '#663399', 
-	                '#006600', 
-	                '#CC0000', 
-	                '#00CCCC',
-					'#CC66CC', 
-	                '#FF6600', 
-	                '#003333', 
-	                '#000066', 
-	                '#333366',
-					'#FFFF00', 
-	                '#FFCC00', 
-	                '#FFCC66', 
-	                '#BBFF00', 
-	                '#25AD25',
-					'#0092FF', 
-	                '#4040FF', 
-	                '#B20845', 
-	                '#003D37', 
-	                '#FFB000'
-					
+	                '#FF9900',
+					'#660000', 
+	                '#9933CC', 
+	                '#9999CC',
+					'#FFCE00',
+					'#FF6700',
+					'#000000',
+					'#606060',
+					'#FF9F9F',
+					'#5B2700',
+					'#83D6FF',
+					'#B6FFB8',
+					'#FFF98D',
+					'#009696',
+					'#56074B'
 	            ];
 
 	var nombres = [
 	                "PATTI SMITH",
-	                "ALEJANDRA PIZARNIK",
 	                "TACITA DEAN",
 	                "FRANCIS ALÿS",
 	                "JOSEPH BEUYS",
@@ -77,7 +79,11 @@ $( document ).ready(function() {
 					"MIGUEL JARA",
 					"ELKIN CALDERÓN",
 					"WALTER DE MARIA",
-					"RAFAëL ROZENDAAL"
+					"RAFAëL ROZENDAAL",
+					"JOSEPH KOSUTH",
+					"ROGER COLOM",
+					"ANDRÉS MARTÍNEZ",
+					"DAVID BYRNE"
 					
 	            ];
                         
