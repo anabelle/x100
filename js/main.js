@@ -103,15 +103,21 @@ $( document ).ready(function() {
 	  };
 	}
 
-	var lista_nombres = shuffle(nombres);
-	var lista_colores = shuffle(colores);
-	var colors = randomNoRepeats( lista_colores );
 
-	var i;
-	for (i = 0; i < lista_nombres.length; ++i) {
-		console.log( lista_nombres[i] );
-		$('#nombres .row').append(
-			'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
-		);
+	var generar = function(){	
+		var i;
+		$('#nombres .row').empty();
+		var lista_nombres = shuffle(nombres);
+		var lista_colores = shuffle(colores);
+		var colors = randomNoRepeats( lista_colores );
+		for (i = 0; i < lista_nombres.length; ++i) {
+			$('#nombres .row').append(
+				'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
+			);
+		}
 	}
+
+	generar();
+
+	$( document ).on( "click", generar );
 });
