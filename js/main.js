@@ -30,7 +30,7 @@ $( document ).ready(function() {
 	var nombres = [
 	                "PATTI SMITH",
 	                "TACITA DEAN",
-	                "FRANCIS ALÿS",
+	                "FRANCIS ALŸS",
 	                "JOSEPH BEUYS",
 	                "CILDO MEIRELES",
 	                "DAVID HOCKNEY",
@@ -79,11 +79,24 @@ $( document ).ready(function() {
 					"MIGUEL JARA",
 					"ELKIN CALDERÓN",
 					"WALTER DE MARIA",
-					"RAFAëL ROZENDAAL",
+					"RAFAËL ROZENDAAL",
 					"JOSEPH KOSUTH",
 					"ROGER COLOM",
 					"ANDRÉS MARTÍNEZ",
-					"DAVID BYRNE"
+					"DAVID BYRNE",
+					"IVAN ARGOTE",
+					"JAMES TURRELL",
+					"DAVID PEÑA",
+					"RAYMOND PETTIBON",
+					"DANIEL SÁNCHEZ",
+					"JENNY HOLZER",
+					"JANINE ANTONI",
+					"CAI GUO-QIANG",
+					"DENNIS OPPENHEIM",
+					"GERHARD RICHTER",
+					"WILLIAM TURNER",
+					"MICHEL GONDRY"
+				
 					
 	            ];
                         
@@ -103,21 +116,15 @@ $( document ).ready(function() {
 	  };
 	}
 
+	var lista_nombres = shuffle(nombres);
+	var lista_colores = shuffle(colores);
+	var colors = randomNoRepeats( lista_colores );
 
-	var generar = function(){	
-		var i;
-		$('#nombres .row').empty();
-		var lista_nombres = shuffle(nombres);
-		var lista_colores = shuffle(colores);
-		var colors = randomNoRepeats( lista_colores );
-		for (i = 0; i < lista_nombres.length; ++i) {
-			$('#nombres .row').append(
-				'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
-			);
-		}
+	var i;
+	for (i = 0; i < lista_nombres.length; ++i) {
+		console.log( lista_nombres[i] );
+		$('#nombres .row').append(
+			'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
+		);
 	}
-
-	generar();
-
-	$( document ).on( "click", generar );
 });
