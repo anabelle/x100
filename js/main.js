@@ -128,7 +128,17 @@ $( document ).ready(function() {
 					"MICHELANGELO PISTOLETTO",
 					"HUMBERTO JUNCA"
 	            ];
-                        
+
+	var nombres_mostrados = [ "ninguno" ];
+
+	function inArray(needle, haystack) {
+		var length = haystack.length;
+		for(var i = 0; i < length; i++) {
+		    if(haystack[i] == needle) return true;
+		}
+		return false;
+	}  
+
 	function shuffle(o){
 		for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 		return o;
@@ -152,14 +162,35 @@ $( document ).ready(function() {
 		var lista_nombres = shuffle(nombres);
 		var lista_colores = shuffle(colores);
 		var colors = randomNoRepeats( lista_colores );
-		for (i = 0; i < lista_nombres.length; ++i) {
-			$('#nombres .row').append(
-				'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
-			);
+
+		if( nombres_mostrados.length == 100 ){
+
+			// console.log( "ya se mostraron todos, reiniciando");
+			nombres_mostrados = [ "todos" ];
 		}
+
+		if( inArray( lista_nombres[0] , nombres_mostrados ) ){
+
+			// console.log( "el primero ya se mostro ");
+			// console.log( nombres_mostrados );
+			generar();			
+		
+		}else{
+
+			nombres_mostrados.push( lista_nombres[0] );
+			for (i = 0; i < lista_nombres.length; ++i) {
+				$('#nombres .row').append(
+					'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
+				);
+			}
+
+		}
+
 	}
 
 	generar();
 
 	$( document ).on( "click", generar );
+	$(document).keypress( generar );
+	
 });
