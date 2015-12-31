@@ -130,6 +130,7 @@ $( document ).ready(function() {
 	            ];
 
 	var nombres_mostrados = [ "ninguno" ];
+	var nombres_cantidad = nombres.length;
 
 	function inArray(needle, haystack) {
 		var length = haystack.length;
@@ -163,13 +164,13 @@ $( document ).ready(function() {
 		var lista_colores = shuffle(colores);
 		var colors = randomNoRepeats( lista_colores );
 
-		if( nombres_mostrados.length == 100 ){
+		if( nombres_mostrados.length == nombres_cantidad + 1 ){
 
 			// console.log( "ya se mostraron todos, reiniciando");
 			nombres_mostrados = [ "todos" ];
 		}
 
-		if( inArray( lista_nombres[0] , nombres_mostrados ) ){
+		if( inArray( lista_nombres[ nombres_cantidad - 1 ] , nombres_mostrados ) ){
 
 			// console.log( "el primero ya se mostro ");
 			// console.log( nombres_mostrados );
@@ -177,7 +178,8 @@ $( document ).ready(function() {
 		
 		}else{
 
-			nombres_mostrados.push( lista_nombres[0] );
+			nombres_mostrados.push( lista_nombres[ nombres_cantidad - 1] );
+			// console.log( nombres_mostrados );
 			for (i = 0; i < lista_nombres.length; ++i) {
 				$('#nombres .row').append(
 					'<div style="color:'+colors()+'" class="flex-item">'+lista_nombres[i]+'</div>'
@@ -191,6 +193,6 @@ $( document ).ready(function() {
 	generar();
 
 	$( document ).on( "click", generar );
-	$(document).keypress( generar );
-	
+	$( document ).keypress( generar );
+
 });
