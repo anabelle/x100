@@ -38,6 +38,7 @@ $( document ).ready(function() {
 	                "MARCEL DUCHAMP",
 	                "RONI HORN",
 					"BRIAN ENO",
+					
 	                "JOHN BALDESSARI",
 	                "PAUL PFEIFFER",
 	                "MAYA DEREN",
@@ -48,16 +49,18 @@ $( document ).ready(function() {
 	                "VASILI KANDINSKY",
 	                "JOHN CAGE",
 	                "WILLIAM KENTRIDGE",
+					
 	                "ANTONIO LÓPEZ GARCÍA",
 	                "OSCAR WILDE",
 	                "CHRIS MARKER",
 	                "JEAN-LUC GODARD",
 					"WONG KAR-WAI",
-					"WIM WENDERS",
+					"NICOLÁS CONSUEGRA",
 					"AGNES VARDA",
 					"JACK SMITH",
 					"DAVID BOWIE",
 					"IGGY POP",
+					
 					"BEATRIZ GONZÁLEZ",
 					"MILENA BONILLA",
 					"NÉSTOR GUTIÉRREZ",
@@ -68,6 +71,7 @@ $( document ).ready(function() {
 					"LUCAS OSPINA",
 					"NATALIA CASTAÑEDA",
 					"LILIANA VÉLEZ",
+					
 					"MATEO COHEN",
 					"OSCAR MUÑOZ",
 					"MARCIA CABRERA",
@@ -78,6 +82,7 @@ $( document ).ready(function() {
 					"WALTER DE MARÍA",
 					"RAFAëL ROZENDAAL",
 					"JOSEPH KOSUTH",
+					
 					"ROGER COLOM",
 					"ANDRÉS MARTÍNEZ",
 					"DAVID BYRNE",
@@ -88,28 +93,30 @@ $( document ).ready(function() {
 					"ANDRÉS FELIPE URIBE",
 					"CAI GUO-QIANG",
 					"MADS LYNNERUP",
+					
 					"GUILLERMO GÓMEZ-PEÑA",
 					"JAMES TURRELL",
 					"SEBASTIÁN ÁLVAREZ",
 					"MARÍA FERNANDA CARDOZO",
 					"GORDON MATTA-CLARK",
-					"PIPILOTTI RIST",
-					"SANTIAGO REYES",
+					"ADRIANA GARCÍA GALÁN",
 					"ALEJANDRO MANCERA",
 					"IVÁN ARGOTE",
 					"ÍCARO ZORBAR",
+					"LUIS CAMNITZER",
+					
 					"ANA BELÉN CANTONI",
 					"JEISSON CASTRO",
 					"WILL BROWN",
-					"CHRIS SOLLARS",
+					"PAULO LICONA",
 					"MARTÍNEZ-ZEA",
 					"ANDRÉS JURADO",
 					"SANTIAGO FORERO",
-					"CATALINA RODRÍGUEZ",
+					"ANDREA FRASER",
 					"DANIEL EATOCK",
 					"DIEGO PIÑEROS",
+					
 					"ENAR DE DIOS RODRÍGUEZ",
-					"JOSEPH DEL PESCO",
 					"LEANDRO ERLICH",
 					"LEÓN FERRARI",
 					"CARLOS CASTRO",
@@ -118,15 +125,21 @@ $( document ).ready(function() {
 					"JOHN DIVOLA",
 					"GERHARD RICHTER",
 					"ALBERTO GIACOMETTI",
+					"MATEO PIZARRO",
+					
 					"THE YES MEN",
 					"ADRIANA SALAZAR",
-					"9000",
+					"HITO STEYERL",
 					"LUCIANA PONTE",
 					"LEYLA CÁRDENAS",
 					"JONATHAN RAMÍREZ",
 					"GIOVANNI ANSELMO",
 					"MICHELANGELO PISTOLETTO",
-					"HUMBERTO JUNCA"
+					"HUMBERTO JUNCA",
+					"TINO SEHGAL",
+					"ALVIN LUCIER"
+					
+					
 	            ];
 
 	var nombres_mostrados = [ "ninguno" ];

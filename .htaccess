@@ -73,7 +73,6 @@
 #     Header set Timing-Allow-Origin: "*"
 # </IfModule>
 
-
 # ######################################################################
 # # ERRORS                                                             #
 # ######################################################################
@@ -99,7 +98,6 @@ ErrorDocument 404 /404.html
 # https://httpd.apache.org/docs/current/content-negotiation.html#multiviews
 
 Options -MultiViews
-
 
 # ######################################################################
 # # INTERNET EXPLORER                                                  #
@@ -145,7 +143,6 @@ Options -MultiViews
 #     Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
 # </IfModule>
 
-
 # ######################################################################
 # # MEDIA TYPES AND CHARACTER ENCODINGS                                #
 # ######################################################################
@@ -168,14 +165,12 @@ Options -MultiViews
     AddType application/vnd.geo+json                    geojson
     AddType application/xml                             atom rdf rss xml
 
-
   # JavaScript
 
     # Normalize to standard type.
     # https://tools.ietf.org/html/rfc4329#section-7.2
 
     AddType application/javascript                      js
-
 
   # Manifest files
 
@@ -213,7 +208,6 @@ Options -MultiViews
     AddType application/x-web-app-manifest+json         webapp
     AddType text/cache-manifest                         appcache manifest
 
-
   # Media files
 
     AddType audio/mp4                                   f4a f4b m4a
@@ -232,7 +226,6 @@ Options -MultiViews
 
     AddType image/x-icon                                cur ico
 
-
   # Web fonts
 
     AddType application/font-woff                       woff
@@ -249,7 +242,6 @@ Options -MultiViews
 
     AddType application/x-font-ttf                      ttc ttf
     AddType font/opentype                               otf
-
 
   # Other
 
@@ -299,7 +291,6 @@ AddDefaultCharset utf-8
                      .xloc \
                      .xml
 </IfModule>
-
 
 # ######################################################################
 # # REWRITES                                                           #
@@ -394,6 +385,8 @@ AddDefaultCharset utf-8
     RewriteEngine On
     RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
     RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
@@ -412,7 +405,6 @@ AddDefaultCharset utf-8
 #     RewriteCond %{SERVER_ADDR} !=::1
 #     RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
-
 
 # ######################################################################
 # # SECURITY                                                           #
@@ -528,6 +520,8 @@ AddDefaultCharset utf-8
     RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
     RewriteCond %{SCRIPT_FILENAME} -d [OR]
     RewriteCond %{SCRIPT_FILENAME} -f
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
     RewriteRule "(^|/)\." - [F]
 </IfModule>
 
@@ -670,7 +664,6 @@ AddDefaultCharset utf-8
 # https://httpd.apache.org/docs/current/mod/core.html#servertokens
 
 # ServerTokens Prod
-
 
 # ######################################################################
 # # WEB PERFORMANCE                                                    #
